@@ -86,22 +86,46 @@
     .brand {
       display: flex;
       align-items: center;
+      gap: 13px;
       min-width: max-content;
-      padding: 2px 4px;
     }
 
-    .brand-logo {
-      display: block;
-      width: 420px;
-      height: 96px;
+    .brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 14px 28px rgba(6, 46, 86, 0.2);
+      overflow: hidden;
+      padding: 5px;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
       object-fit: contain;
-      object-position: left center;
+      border-radius: 14px;
     }
 
-    .brand-mark,
-    .brand-name,
+    .brand-name {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      color: var(--navy);
+      line-height: 1.05;
+    }
+
+    .brand-name span {
+      color: var(--teal);
+    }
+
     .brand-subline {
-      display: none;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: 0.01em;
     }
 
     .nav-links {
@@ -949,7 +973,13 @@
   <header class="topbar">
     <div class="page-shell nav">
       <a href="#start" class="brand" aria-label="Webdesign_Elbe Startseite">
-        <img class="brand-logo" src="./Assets/Logonew.png" alt="Webdesign_Elbe Logo" />
+        <div class="brand-mark">
+          <img src="./assets/logo-webdesign-elbe.png" alt="Webdesign_Elbe Logo" />
+        </div>
+        <div>
+          <div class="brand-name">Webdesign_<span>Elbe</span></div>
+          <div class="brand-subline">Moderne Websites für KMU</div>
+        </div>
       </a>
 
       <nav class="nav-links" aria-label="Hauptnavigation">
