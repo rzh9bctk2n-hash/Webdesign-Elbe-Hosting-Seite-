@@ -612,61 +612,127 @@
     .reference-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
 
     .reference-card {
       overflow: hidden;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(6, 46, 86, 0.1);
+      border-radius: 24px;
+      box-shadow: 0 18px 45px rgba(4, 31, 61, 0.08);
     }
 
     .reference-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 24px 60px rgba(4, 31, 61, 0.12);
+      transform: translateY(-7px);
+      box-shadow: 0 28px 70px rgba(4, 31, 61, 0.14);
+      border-color: rgba(28, 133, 135, 0.26);
+    }
+
+    .reference-card-link {
+      display: block;
+      height: 100%;
     }
 
     .reference-image {
-      height: 220px;
-      background: linear-gradient(135deg, var(--navy), var(--teal));
+      height: 255px;
+      background: #eaf7ff;
       position: relative;
       overflow: hidden;
+      border-bottom: 1px solid rgba(6, 46, 86, 0.08);
+    }
+
+    .reference-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6,46,86,0.02), rgba(6,46,86,0.18));
+      pointer-events: none;
     }
 
     .reference-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.88;
-      mix-blend-mode: screen;
+      object-position: top center;
+      opacity: 1;
+      mix-blend-mode: normal;
+      transition: transform 0.35s ease;
+    }
+
+    .reference-card:hover .reference-image img {
+      transform: scale(1.035);
     }
 
     .reference-tag {
       position: absolute;
-      top: 14px;
-      left: 14px;
-      padding: 7px 10px;
+      top: 16px;
+      left: 16px;
+      z-index: 2;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.92);
       color: var(--navy);
-      font-weight: 850;
+      font-weight: 900;
       font-size: 12px;
+      box-shadow: 0 10px 24px rgba(4, 31, 61, 0.1);
+      backdrop-filter: blur(12px);
     }
 
     .reference-body {
       padding: 24px;
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
     }
 
-    .reference-actions {
+    .reference-body h3 {
+      font-size: 24px;
+      letter-spacing: -0.045em;
+      margin-bottom: 12px;
+    }
+
+    .reference-body p {
+      font-size: 15px;
+      line-height: 1.58;
+    }
+
+    .reference-meta {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
       margin-top: 18px;
     }
 
-    .text-link {
+    .reference-meta span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(234, 247, 255, 0.9);
+      color: rgba(23, 50, 74, 0.78);
+      font-size: 12px;
       font-weight: 850;
+    }
+
+    .reference-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    .text-link {
+      font-weight: 900;
       color: var(--teal);
       font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .text-link:hover {
+      color: var(--navy);
     }
 
     .pricing-grid {
@@ -974,7 +1040,7 @@
     <div class="page-shell nav">
       <a href="#start" class="brand" aria-label="Webdesign_Elbe Startseite">
         <div class="brand-mark">
-          <img src="./Assets/Logonew.png" alt="Webdesign_Elbe Logo" />
+          <img src="./assets/logo-webdesign-elbe.png" alt="Webdesign_Elbe Logo" />
         </div>
         <div>
           <div class="brand-name">Webdesign_<span>Elbe</span></div>
@@ -1144,48 +1210,66 @@
 
         <div class="reference-grid">
           <article class="reference-card">
-            <div class="reference-image">
-              <span class="reference-tag">Modern & lokal</span>
-              <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1200&q=80" alt="Referenzseite Gastronomie" />
-            </div>
-            <div class="reference-body">
-              <h3>André's Kleine Kneipe</h3>
-              <p>Eine moderne Website für Gastronomie, Catering und Eventlocation mit emotionalem Einstieg und klaren Handlungswegen.</p>
-              <div class="reference-actions">
-                <a href="#" class="text-link">Demo ansehen →</a>
-                <a href="#kontakt" class="text-link">Ähnlich anfragen</a>
+            <a class="reference-card-link" href="https://rzh9bctk2n-hash.github.io/Elbe-Gebaeudeservice-Referenzseite/" target="_blank" rel="noopener">
+              <div class="reference-image">
+                <span class="reference-tag">Handwerk & Vertrauen</span>
+                <img src="./Assets/referenz-elbe-gebaeudeservice.png" alt="Screenshot der Referenzseite Elbe Gebäudeservice" />
               </div>
-            </div>
+              <div class="reference-body">
+                <h3>Elbe Gebäudeservice</h3>
+                <p>Eine klare Dienstleister-Seite mit starken Vertrauenselementen, großem Hero-Bereich, Leistungsfokus und direkter Anfrageführung.</p>
+                <div class="reference-meta">
+                  <span>Dienstleistung</span>
+                  <span>Clean</span>
+                  <span>Mobil optimiert</span>
+                </div>
+                <div class="reference-actions">
+                  <span class="text-link">Demo ansehen →</span>
+                </div>
+              </div>
+            </a>
           </article>
 
           <article class="reference-card">
-            <div class="reference-image">
-              <span class="reference-tag">Premium & clean</span>
-              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Premium Referenzseite" />
-            </div>
-            <div class="reference-body">
-              <h3>Premium Service Website</h3>
-              <p>Ein hochwertiger, reduzierter Auftritt im Apple-inspirierten Stil – ideal für Beratung, Immobilien, Coaching oder Premium-Dienstleistungen.</p>
-              <div class="reference-actions">
-                <a href="#" class="text-link">Demo ansehen →</a>
-                <a href="#kontakt" class="text-link">Ähnlich anfragen</a>
+            <a class="reference-card-link" href="https://rzh9bctk2n-hash.github.io/Elbgenuss-Catering-Referenzseite/" target="_blank" rel="noopener">
+              <div class="reference-image">
+                <span class="reference-tag">Catering & Events</span>
+                <img src="./Assets/referenz-elbgenuss-catering.png" alt="Screenshot der Referenzseite Elbgenuss Catering" />
               </div>
-            </div>
+              <div class="reference-body">
+                <h3>Elbgenuss Catering</h3>
+                <p>Eine warme, emotionale Catering-Seite mit hochwertiger Bildsprache, Event-Fokus und klarer Positionierung für private und geschäftliche Anlässe.</p>
+                <div class="reference-meta">
+                  <span>Gastronomie</span>
+                  <span>Emotional</span>
+                  <span>Event-Fokus</span>
+                </div>
+                <div class="reference-actions">
+                  <span class="text-link">Demo ansehen →</span>
+                </div>
+              </div>
+            </a>
           </article>
 
           <article class="reference-card">
-            <div class="reference-image">
-              <span class="reference-tag">Handwerk & Vertrauen</span>
-              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Handwerk Referenzseite" />
-            </div>
-            <div class="reference-body">
-              <h3>Elbe Gebäudeservice</h3>
-              <p>Eine klare Dienstleister-Seite mit Leistungen, Vertrauen, Kontaktmöglichkeiten und starker mobiler Wirkung.</p>
-              <div class="reference-actions">
-                <a href="#" class="text-link">Demo ansehen →</a>
-                <a href="#kontakt" class="text-link">Ähnlich anfragen</a>
+            <a class="reference-card-link" href="https://rzh9bctk2n-hash.github.io/Studio-Alva-Premium-Referenzseite/" target="_blank" rel="noopener">
+              <div class="reference-image">
+                <span class="reference-tag">Premium & clean</span>
+                <img src="./Assets/referenz-studio-alva-premium.png" alt="Screenshot der Referenzseite Studio Alva Premium" />
               </div>
-            </div>
+              <div class="reference-body">
+                <h3>Studio Alva Premium</h3>
+                <p>Eine reduzierte Premium-Referenz im modernen Apple-Look – ideal für Beratung, Coaching, Praxis, Beauty oder hochwertige Dienstleistungen.</p>
+                <div class="reference-meta">
+                  <span>Premium</span>
+                  <span>Apple-Look</span>
+                  <span>Reduziert</span>
+                </div>
+                <div class="reference-actions">
+                  <span class="text-link">Demo ansehen →</span>
+                </div>
+              </div>
+            </a>
           </article>
         </div>
       </div>
