@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz | Webdesign_Elbe</title>
+  <meta name="description" content="Datenschutzerklärung von Webdesign_Elbe." />
+
+  <style>
+    :root {
+      --navy: #062e56;
+      --navy-2: #041f3d;
+      --teal: #1c8587;
+      --blue: #58aede;
+      --white: #ffffff;
+      --text: #17324a;
+      --muted: #61758a;
+      --line: rgba(6, 46, 86, 0.12);
+      --shadow: 0 22px 60px rgba(4, 31, 61, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(88, 174, 222, 0.18), transparent 28%),
+        linear-gradient(180deg, #f8fcff 0%, #ffffff 48%, #f5fbff 100%);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      width: min(980px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 14px 0;
+      background: rgba(248, 252, 255, 0.72);
+      backdrop-filter: blur(22px);
+      border-bottom: 1px solid rgba(6, 46, 86, 0.06);
+    }
+
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 10px 14px;
+      border: 1px solid rgba(6, 46, 86, 0.1);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 18px 50px rgba(4, 31, 61, 0.1);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 950;
+      font-size: 24px;
+      letter-spacing: -0.06em;
+      color: var(--navy);
+    }
+
+    .brand span {
+      color: var(--teal);
+    }
+
+    .nav a.back {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      color: white;
+      font-weight: 850;
+      box-shadow: 0 14px 30px rgba(6, 46, 86, 0.18);
+    }
+
+    .hero {
+      padding: 72px 0 36px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--teal);
+      font-weight: 900;
+      font-size: 13px;
+      border: 1px solid rgba(6, 46, 86, 0.1);
+      box-shadow: 0 10px 28px rgba(4,31,61,0.06);
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 0.95;
+      letter-spacing: -0.075em;
+      color: var(--navy-2);
+      margin-bottom: 22px;
+    }
+
+    .intro {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .content-card {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 42px);
+      margin: 28px 0 80px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 26px;
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+      margin: 34px 0 12px;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 19px;
+      margin: 22px 0 8px;
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 10px 0 0;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    .note {
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: #eef9ff;
+      border: 1px solid rgba(6, 46, 86, 0.1);
+      color: var(--muted);
+      margin: 18px 0;
+      font-size: 14px;
+    }
+
+    .footer {
+      background: var(--navy-2);
+      color: rgba(255,255,255,0.82);
+      padding: 34px 0;
+    }
+
+    .footer-inner {
+      width: min(980px, calc(100% - 36px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    .footer a {
+      font-weight: 800;
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav a.back {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="page-shell nav">
+      <a href="./index.html" class="brand">Webdesign_<span>Elbe</span></a>
+      <a href="./index.html" class="back">Zurück zur Startseite</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-shell">
+      <div class="eyebrow">Datenschutzerklärung</div>
+      <h1>Datenschutz bei Webdesign_Elbe.</h1>
+      <p class="intro">
+        Diese Datenschutzerklärung informiert darüber, welche personenbezogenen Daten beim Besuch dieser Website und bei einer Kontaktaufnahme verarbeitet werden.
+      </p>
+    </section>
+
+    <section class="page-shell">
+      <div class="content-card">
+        <div class="note">
+          Hinweis: Diese Vorlage muss vor Veröffentlichung mit deinen echten Unternehmensdaten, Hosting-Angaben und der tatsächlichen Formularlösung final angepasst werden.
+        </div>
+
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Verantwortlich für die Datenverarbeitung auf dieser Website ist:
+        </p>
+        <p>
+          <strong>Emilio Riemann</strong><br />
+          Webdesign_Elbe<br />
+          [Straße und Hausnummer ergänzen]<br />
+          [PLZ und Ort ergänzen]<br />
+          E-Mail: kontakt@webdesign-elbe.de
+        </p>
+
+        <h2>2. Allgemeine Hinweise zur Datenverarbeitung</h2>
+        <p>
+          Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung dieser Website, zur Bearbeitung von Anfragen oder zur Erfüllung gesetzlicher Pflichten erforderlich ist.
+        </p>
+
+        <h2>3. Zugriffsdaten und Server-Logfiles</h2>
+        <p>
+          Beim Aufruf dieser Website werden durch den Hosting-Anbieter automatisch Informationen verarbeitet, die dein Browser übermittelt. Dazu können insbesondere gehören:
+        </p>
+        <ul>
+          <li>IP-Adresse</li>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>aufgerufene Seite oder Datei</li>
+          <li>übertragene Datenmenge</li>
+          <li>Browsertyp und Browserversion</li>
+          <li>Betriebssystem</li>
+          <li>Referrer-URL</li>
+        </ul>
+        <p>
+          Die Verarbeitung erfolgt zur technischen Bereitstellung, Sicherheit und Stabilität der Website. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+        </p>
+
+        <h2>4. Hosting</h2>
+        <p>
+          Diese Website wird bei folgendem Anbieter gehostet:
+        </p>
+        <p>
+          <strong>[Hosting-Anbieter ergänzen, z. B. STRATO AG]</strong><br />
+          [Adresse des Hosting-Anbieters ergänzen]
+        </p>
+        <p>
+          Der Hosting-Anbieter verarbeitet personenbezogene Daten, die beim Besuch dieser Website anfallen, insbesondere Zugriffsdaten und Server-Logfiles.
+        </p>
+
+        <h2>5. Kontaktaufnahme</h2>
+        <p>
+          Wenn du uns per E-Mail oder über ein Kontaktformular kontaktierst, verarbeiten wir die von dir angegebenen Daten zur Bearbeitung deiner Anfrage. Dazu können insbesondere Name, Unternehmen, E-Mail-Adresse, gewähltes Paket und Nachricht gehören.
+        </p>
+        <p>
+          Die Verarbeitung erfolgt zur Bearbeitung deiner Anfrage und gegebenenfalls zur Durchführung vorvertraglicher Maßnahmen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO. Soweit die Verarbeitung zur Organisation und Dokumentation der Anfrage erforderlich ist, kann zusätzlich Art. 6 Abs. 1 lit. f DSGVO einschlägig sein.
+        </p>
+
+        <h2>6. Cookies</h2>
+        <p>
+          Diese Website verwendet derzeit keine nicht notwendigen Cookies, Tracking-Tools oder Analyse-Dienste.
+        </p>
+
+        <h2>7. Externe Links</h2>
+        <p>
+          Auf dieser Website können Links zu externen Websites enthalten sein, insbesondere zu Demo- und Referenzseiten. Beim Anklicken eines externen Links gelten die Datenschutzbestimmungen des jeweiligen Anbieters oder Seitenbetreibers.
+        </p>
+
+        <h2>8. Speicherdauer</h2>
+        <p>
+          Personenbezogene Daten werden nur so lange gespeichert, wie dies für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.
+        </p>
+
+        <h2>9. Deine Rechte</h2>
+        <p>
+          Du hast im Rahmen der gesetzlichen Voraussetzungen insbesondere folgende Rechte:
+        </p>
+        <ul>
+          <li>Recht auf Auskunft über die verarbeiteten personenbezogenen Daten</li>
+          <li>Recht auf Berichtigung unrichtiger Daten</li>
+          <li>Recht auf Löschung</li>
+          <li>Recht auf Einschränkung der Verarbeitung</li>
+          <li>Recht auf Datenübertragbarkeit</li>
+          <li>Recht auf Widerspruch gegen bestimmte Verarbeitungen</li>
+          <li>Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde</li>
+        </ul>
+
+        <h2>10. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+        <p>
+          Wenn du der Ansicht bist, dass die Verarbeitung deiner personenbezogenen Daten gegen Datenschutzrecht verstößt, hast du das Recht, dich bei einer zuständigen Datenschutzaufsichtsbehörde zu beschweren.
+        </p>
+
+        <h2>11. Änderungen dieser Datenschutzerklärung</h2>
+        <p>
+          Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich technische, rechtliche oder organisatorische Änderungen ergeben.
+        </p>
+
+        <p style="margin-top: 32px;">
+          <strong>Stand:</strong> Mai 2026
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Webdesign_Elbe</span>
+      <span>
+        <a href="./index.html">Startseite</a> ·
+        <a href="./impressum.html">Impressum</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
