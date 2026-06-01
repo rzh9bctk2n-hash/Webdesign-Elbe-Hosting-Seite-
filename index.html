@@ -1651,37 +1651,77 @@
           </aside>
 
           <form class="contact-card form" action="#" method="post">
-            <label>
-              Name
-              <input type="text" name="name" placeholder="Max Mustermann" required />
-            </label>
-            <label>
-              Unternehmen
-              <input type="text" name="company" placeholder="Musterbetrieb GmbH" />
-            </label>
-            <label>
-              E-Mail
-              <input type="email" name="email" placeholder="mail@beispiel.de" required />
-            </label>
-            <label>
-              Wunschpaket
-              <select name="package">
-                <option>Starter</option>
-                <option>Business</option>
-                <option>Premium</option>
-                <option>Wartung Simple</option>
-                <option>Wartung Plus</option>
-                <option>Wartung Pro</option>
-                <option>Noch unsicher</option>
-              </select>
-            </label>
-            <label class="full">
-              Nachricht
-              <textarea name="message" placeholder="Worum geht es? Gibt es schon eine bestehende Website, Bilder, Logo oder Referenzseiten?"></textarea>
-            </label>
-            <p class="form-note">Hinweis: Für eine echte Website muss das Formular noch technisch angebunden werden, zum Beispiel über Formspree, Netlify Forms, einen eigenen Mail-Dienst oder ein Backend.</p>
-            <button class="btn btn-primary" type="submit">Anfrage senden</button>
-          </form>
+  <label>
+    Name
+    <input type="text" name="name" placeholder="Max Mustermann" required />
+  </label>
+
+  <label>
+    Unternehmen / Projekt
+    <input type="text" name="project" placeholder="z. B. Café, Praxis, Handwerksbetrieb oder Projektname" />
+  </label>
+
+  <label>
+    E-Mail
+    <input type="email" name="email" placeholder="mail@beispiel.de" required />
+  </label>
+
+  <label>
+    Telefon
+    <input type="tel" name="phone" placeholder="Optional für Rückfragen" />
+  </label>
+
+  <label>
+    Was brauchst du?
+    <select name="request_type">
+      <option>Neue Website</option>
+      <option>Überarbeitung einer bestehenden Website</option>
+      <option>Landingpage / Onepager</option>
+      <option>Wartung oder Änderung</option>
+      <option>Noch unsicher</option>
+    </select>
+  </label>
+
+  <label>
+    Website-Paket
+    <select name="website_package">
+      <option>Noch unsicher</option>
+      <option>Starter – ab 499 €</option>
+      <option>Business – 899 €</option>
+      <option>Premium – ab 1.499 €</option>
+      <option>Individuelle Lösung</option>
+      <option>Kein Website-Paket benötigt</option>
+    </select>
+  </label>
+
+  <label>
+    Wartungspaket
+    <select name="maintenance_package">
+      <option>Noch unsicher</option>
+      <option>Simple – 0 € / Monat, Abrechnung nach Änderung</option>
+      <option>Plus – 9,99 € / Monat</option>
+      <option>Pro – 14,99 € / Monat</option>
+      <option>Individuelle Wartungslösung</option>
+      <option>Keine Wartung gewünscht</option>
+    </select>
+  </label>
+
+  <label>
+    Bestehende Website
+    <input type="text" name="current_website" placeholder="Falls vorhanden: www.beispiel.de" />
+  </label>
+
+  <label class="full">
+    Nachricht
+    <textarea name="message" placeholder="Beschreibe kurz dein Vorhaben: Was soll die Website können, welche Inhalte gibt es schon und welcher Stil gefällt dir?"></textarea>
+  </label>
+
+  <p class="form-note">
+    Deine Angaben helfen dabei, das passende Website- und Wartungsmodell einzuschätzen. Du erhältst anschließend eine unverbindliche Rückmeldung.
+  </p>
+
+  <button class="btn btn-primary" type="submit">Anfrage senden</button>
+</form>
         </div>
       </div>
     </section>
