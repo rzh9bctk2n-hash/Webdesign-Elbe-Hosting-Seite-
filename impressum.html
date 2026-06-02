@@ -106,13 +106,13 @@
     }
 
     .brand-mark img {
-      width: 72px;
-      height: 72px;
-      max-width: none;
-      object-fit: contain;
-      transform: scale(1.02);
-      transform-origin: center;
-    }
+  width: 72px;
+  height: 72px;
+  max-width: none;
+  object-fit: contain;
+  transform: scale(1.02) translateX(-4px) translateY(-3px);
+  transform-origin: center;
+}
 
     .brand-name {
       font-size: 22px;
@@ -437,33 +437,49 @@
       }
     }
 
-    @media (max-width: 680px) {
-      .page-shell {
-        width: min(100% - 24px, 1180px);
-      }
+   @media (max-width: 680px) {
+  .page-shell {
+    width: min(100% - 24px, 1180px);
+  }
 
-      .legal-hero {
-        padding-top: 50px;
-      }
+  .legal-hero {
+    padding-top: 50px;
+  }
 
-      .brand-name {
-        font-size: 19px;
-      }
+  .brand-name {
+    font-size: 19px;
+  }
 
-      .btn {
-        width: 100%;
-      }
+  .brand-mark {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border-radius: 16px;
+  }
 
-      .content-card,
-      .side-card {
-        padding: 24px;
-      }
+  .brand-mark img {
+    width: 54px;
+    height: 54px;
+    transform: scale(1.02) translateX(-3px) translateY(-2px);
+  }
 
-      .footer-grid {
-        align-items: stretch;
-        flex-direction: column;
-      }
-    }
+.nav > .btn {
+  width: auto;
+  flex: 0 0 auto;
+  padding: 11px 14px;
+  font-size: 13px;
+}
+
+  .content-card,
+  .side-card {
+    padding: 24px;
+  }
+
+  .footer-grid {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
   </style>
 </head>
 
