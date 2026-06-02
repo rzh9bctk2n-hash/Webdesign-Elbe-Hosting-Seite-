@@ -550,6 +550,82 @@
       gap: 18px;
     }
 
+    .personal-section {
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(28, 133, 135, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #eef9ff 100%);
+  border-top: 1px solid rgba(6, 46, 86, 0.06);
+  border-bottom: 1px solid rgba(6, 46, 86, 0.06);
+}
+
+.personal-card {
+  display: grid;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 34px;
+  align-items: center;
+  padding: 34px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(6, 46, 86, 0.12);
+  box-shadow: 0 24px 70px rgba(4, 31, 61, 0.10);
+}
+
+.personal-image {
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+  border: 1px solid rgba(6, 46, 86, 0.1);
+  box-shadow: 0 18px 45px rgba(4, 31, 61, 0.10);
+}
+
+.personal-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.personal-content h2 {
+  margin-bottom: 18px;
+}
+
+.personal-content p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.72;
+  margin-bottom: 14px;
+}
+
+.personal-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.personal-facts div {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(234, 247, 255, 0.75);
+  border: 1px solid rgba(6, 46, 86, 0.08);
+}
+
+.personal-facts strong {
+  display: block;
+  color: var(--navy);
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.personal-facts span {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+    
     .service-card,
     .reference-card,
     .price-card,
@@ -1335,6 +1411,18 @@
     flex-direction: column;
     align-items: flex-start;
   }
+      .personal-card {
+  grid-template-columns: 1fr;
+  padding: 24px;
+}
+
+.personal-image img {
+  min-height: 320px;
+}
+
+.personal-facts {
+  grid-template-columns: 1fr;
+}     
 }
   </style>
 </head>
@@ -1353,6 +1441,7 @@
 
       <nav class="nav-links" aria-label="Hauptnavigation">
         <a href="#leistungen">Leistungen</a>
+        <a href="#persoenlich">Persönlich</a>
         <a href="#referenzen">Referenzen</a>
         <a href="#preise">Pakete</a>
         <a href="#wartung">Wartung</a>
@@ -1501,6 +1590,43 @@
         </div>
       </div>
     </section>
+
+    <section id="persoenlich" class="personal-section">
+  <div class="page-shell personal-card">
+    <div class="personal-image">
+      <img src="./Assets/profilbild.jpg" alt="Profilbild von Webdesign-Elbe" />
+    </div>
+
+    <div class="personal-content">
+      <div class="section-kicker">Persönliche Betreuung</div>
+      <h2>Direkter Kontakt statt anonymer Agenturprozess.</h2>
+      <p>
+        Webdesign ist Vertrauenssache. Deshalb hast du bei Webdesign-Elbe keinen anonymen Agenturprozess,
+        sondern einen direkten Ansprechpartner für Planung, Gestaltung und Umsetzung.
+      </p>
+      <p>
+        Ich begleite dein Projekt persönlich – von der ersten Idee bis zur fertigen Website.
+        Dabei geht es nicht darum, möglichst kompliziert zu wirken, sondern eine moderne Website zu erstellen,
+        die zu deinem Unternehmen passt und für deine Kunden verständlich ist.
+      </p>
+
+      <div class="personal-facts">
+        <div>
+          <strong>Direkter Ansprechpartner</strong>
+          <span>Kurze Wege und persönliche Abstimmung.</span>
+        </div>
+        <div>
+          <strong>Verständliche Umsetzung</strong>
+          <span>Ohne Technik-Chaos und unnötige Komplexität.</span>
+        </div>
+        <div>
+          <strong>Fokus auf KMU</strong>
+          <span>Websites für kleine Unternehmen und lokale Dienstleister.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="referenzen" class="references">
       <div class="page-shell">
