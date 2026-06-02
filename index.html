@@ -703,6 +703,32 @@
       box-shadow: 0 18px 45px rgba(4, 31, 61, 0.08);
     }
 
+    .references-note {
+  margin-top: 28px;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(6, 46, 86, 0.12);
+  box-shadow: 0 18px 45px rgba(4, 31, 61, 0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+}
+
+.references-note strong {
+  display: block;
+  color: var(--navy);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.references-note p {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 760px;
+}
+
     .reference-card:hover {
       transform: translateY(-7px);
       box-shadow: 0 28px 70px rgba(4, 31, 61, 0.14);
@@ -1438,6 +1464,11 @@
     align-items: flex-start;
   }
 
+      .references-note {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
   .maintenance-legal-note {
     flex-direction: column;
     align-items: flex-start;
@@ -1673,12 +1704,15 @@
           <article class="reference-card">
             <a class="reference-card-link" href="https://rzh9bctk2n-hash.github.io/Elbe-Gebaeudeservice-Referenzseite/" target="_blank" rel="noopener">
               <div class="reference-image">
-                <span class="reference-tag">Handwerk & Vertrauen</span>
+                <span class="reference-tag">Simple · ab 499 €</span>
                 <img src="./Assets/Gebaeudeservice.png" alt="Screenshot der Referenzseite Elbe Gebäudeservice" />
               </div>
               <div class="reference-body">
                 <h3>Elbe Gebäudeservice</h3>
-                <p>Eine klare Dienstleister-Seite mit starken Vertrauenselementen, großem Hero-Bereich, Leistungsfokus, direkter Anfrageführung und überzeugender mobiler Wirkung.</p>
+                <p>
+  Eine klare Simple-Referenz für Dienstleister, Handwerk und lokale Betriebe:
+  übersichtlich aufgebaut, mobil optimiert und mit direkter Anfrageführung.
+</p>
                 <div class="reference-meta">
                   <span>Dienstleistung</span>
                   <span>Clean</span>
@@ -1694,12 +1728,15 @@
           <article class="reference-card">
             <a class="reference-card-link" href="https://rzh9bctk2n-hash.github.io/Elbgenuss-Catering-Referenzseite/" target="_blank" rel="noopener">
               <div class="reference-image">
-                <span class="reference-tag">Catering & Events</span>
+                <span class="reference-tag">Business · 899 €</span>
                 <img src="./Assets/Catering.png" alt="Screenshot der Referenzseite Elbgenuss Catering" />
               </div>
               <div class="reference-body">
                 <h3>Elbgenuss Catering</h3>
-                <p>Eine warme, emotionale Catering-Seite mit hochwertiger Bildsprache, Event-Fokus und klarer Positionierung für private und geschäftliche Anlässe.</p>
+                <p>
+  Eine ausführlichere Business-Referenz mit stärkerer Bildsprache,
+  mehreren Inhaltsbereichen und klarer Positionierung für private und geschäftliche Anlässe.
+</p>
                 <div class="reference-meta">
                   <span>Gastronomie</span>
                   <span>Emotional</span>
@@ -1715,12 +1752,15 @@
           <article class="reference-card">
             <a class="reference-card-link" href="https://rzh9bctk2n-hash.github.io/Studio-Alva-Premium-Referenzseite/" target="_blank" rel="noopener">
               <div class="reference-image">
-                <span class="reference-tag">Premium & clean</span>
+                <span class="reference-tag">Premium · ab 1.499 €</span>
                 <img src="./Assets/Maison.png" alt="Screenshot der Referenzseite Studio Alva Premium" />
               </div>
               <div class="reference-body">
                 <h3>Studio Alva Premium</h3>
-                <p>Eine reduzierte Premium-Referenz im modernen Apple-Look – ideal für Beratung, Coaching, Praxis, Beauty oder hochwertige Dienstleistungen.</p>
+               <p>
+  Eine hochwertige Premium-Referenz im modernen Look – ideal für Beratung,
+  Coaching, Praxis, Beauty oder anspruchsvolle Dienstleistungen.
+</p>
                 <div class="reference-meta">
                   <span>Premium</span>
                   <span>Apple-Look</span>
@@ -1732,6 +1772,17 @@
               </div>
             </a>
           </article>
+        </div>
+
+        <div class="references-note">
+          <div>
+            <strong>Weitere Demo- und Referenzseiten</strong>
+            <p>
+              Neben den drei Hauptreferenzen findest du auf einer separaten Seite weitere Demo-Websites,
+              Stilrichtungen und Branchenbeispiele als Inspiration für dein eigenes Projekt.
+            </p>
+          </div>
+          <a href="./referenzen.html" class="text-link">Alle Referenzen öffnen →</a>
         </div>
       </div>
     </section>
