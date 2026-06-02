@@ -106,13 +106,13 @@
     }
 
     .brand-mark img {
-      width: 72px;
-      height: 72px;
-      max-width: none;
-      object-fit: contain;
-      transform: scale(1.02);
-      transform-origin: center;
-    }
+  width: 72px;
+  height: 72px;
+  max-width: none;
+  object-fit: contain;
+  transform: scale(1.02) translateX(-4px) translateY(-3px);
+  transform-origin: center;
+}
 
     .brand-name {
       font-size: 22px;
@@ -431,32 +431,65 @@
     }
 
     @media (max-width: 680px) {
-      .page-shell {
-        width: min(100% - 24px, 1180px);
-      }
+  .page-shell {
+    width: min(100% - 24px, 1180px);
+  }
 
-      .legal-hero {
-        padding-top: 50px;
-      }
+  .legal-hero {
+    padding-top: 50px;
+  }
 
-      .brand-name {
-        font-size: 19px;
-      }
+  .nav {
+    gap: 10px;
+    padding: 10px;
+    overflow: hidden;
+  }
 
-      .btn {
-        width: 100%;
-      }
+  .brand {
+    min-width: 0;
+    gap: 10px;
+  }
 
-      .content-card,
-      .side-card {
-        padding: 24px;
-      }
+  .brand-name {
+    font-size: 17px;
+    line-height: 1;
+  }
 
-      .footer-grid {
-        align-items: stretch;
-        flex-direction: column;
-      }
-    }
+  .brand-subline {
+    font-size: 10px;
+    line-height: 1.15;
+  }
+
+  .brand-mark {
+    width: 52px;
+    height: 52px;
+    flex: 0 0 52px;
+    border-radius: 16px;
+  }
+
+  .brand-mark img {
+    width: 54px;
+    height: 54px;
+    transform: scale(1.02) translateX(-3px) translateY(-2px);
+  }
+
+  .nav > .btn {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+
+  .content-card,
+  .side-card {
+    padding: 24px;
+  }
+
+  .footer-grid {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
   </style>
 </head>
 
